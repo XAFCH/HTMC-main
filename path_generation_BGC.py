@@ -14,12 +14,12 @@ def preprocess_text(text):
 
     # Optional: Standardize punctuation
     text = text.translate({
-        ord('�?): ord("'"),
-        ord('�?): ord("'"),
-        ord('�?): ord('"'),
-        ord('�?): ord('"'),
-        ord('�?): ord('-'),
-        ord('�?): ord('-'),
+        ord('â€?): ord("'"),
+        ord('â€?): ord("'"),
+        ord('â€?): ord('"'),
+        ord('â€?): ord('"'),
+        ord('â€?): ord('-'),
+        ord('â€?): ord('-'),
     })
 
     # Strip leading and trailing whitespace
@@ -97,6 +97,6 @@ def get_new_dataset():
 if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
     os.environ["AZURE_OPENAI_KEY"] = os.getenv("AZURE_OPENAI_KEY", "")
-    os.environ["AZURE_OPENAI_ENDPOINT"] = "https://xindiwang.openai.azure.com/"
+    os.environ["AZURE_OPENAI_ENDPOINT"] = "https://openai.azure.com/"
     get_new_dataset()
 
